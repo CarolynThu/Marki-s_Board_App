@@ -1,0 +1,15 @@
+<h1> SHOW </h1>
+
+<% @board.each do |b| %>
+<%= b.name %> <%= b.type %> <%= b.description %> 
+<% end %>
+
+
+
+
+
+
+
+
+
+ <%= link_to 'Make Custom Boards', new_board_path %>

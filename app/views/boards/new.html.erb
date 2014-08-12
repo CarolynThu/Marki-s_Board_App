@@ -1,0 +1,11 @@
+<h1> Customized Boards </h1>
+
+<%= form_for @board do |f| %>
+Name: <%= f.text_field :name, placeholder: "Name" %>
+<%= f.text_field :type, placeholder: "Type" %>
+<%= f.text_field :description, placeholder: "Description" %>
+
+
+<%= f.submit "submit!" %>
+
+<% end %>
