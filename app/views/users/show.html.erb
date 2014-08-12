@@ -1,7 +1,7 @@
 <h1> SHOW </h1>
 
 <% @board.each do |b| %>
-<%= b.name %> <%= b.type %> <%= b.description %> 
+<li> <%= b.name %> <%= b.type %> <%= b.description %></li> 
 <% end %>
 
 
@@ -11,5 +11,5 @@
 
 
 
-
+ <%= link_to "Home", main_path %>
  <%= link_to 'Make Custom Boards', new_board_path %>

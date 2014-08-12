@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params[:user][:password])
       # Creates a cookie for the user, holding the logged in user ID
       session[:user_id] = user.id.to_s
-      redirect_to root_path
+      redirect_to user_path(current_user)
     else
       redirect_to new_user_path
     end

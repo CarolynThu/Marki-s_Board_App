@@ -1,6 +1,7 @@
 class BoardsController < ApplicationController
   def index
     if current_user && current_user.is_admin
+      @boards = Board.all
     else
       redirect_to new_session_path
     end
@@ -19,7 +20,7 @@ class BoardsController < ApplicationController
       alert("You must be signed-in for this feature")
       redirect_to new_session_path
     else
-      @board = Board.new(params.require(:board).permit(:name, :type, :description))
+      @board = current_user.boards.new(params.require(:board).permit(:name, :type, :description))
       if @board.save
         redirect_to user_path(current_user)
       else 
