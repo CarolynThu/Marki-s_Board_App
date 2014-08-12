@@ -1,0 +1,12 @@
+<h1>EDIT THIS BOARD</h1>
+
+
+<%= form_for @board do |f| %>
+    <%= f.text_field :name, placeholder: 'Name' %>
+    <%= f.text_field :type, placeholder: 'Type' %>
+    <%= f.text_field :description, placeholder: 'Description' %>
+    <%= f.submit 'Save Changes' %>
+  <% end %>
+
+<%= link_to "Home", main_path %>
+<%= link_to "SHOW", user_path(current_user) %>

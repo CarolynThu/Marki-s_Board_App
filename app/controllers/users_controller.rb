@@ -48,6 +48,6 @@ class UsersController < ApplicationController
   def destroy
     reset_session
     User.find(params[:id]).destroy
-    redirect_to welcome_path
+    redirect_to main_path
   end
 end

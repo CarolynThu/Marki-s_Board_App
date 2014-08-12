@@ -31,13 +31,17 @@ class BoardsController < ApplicationController
   end
 
   def edit
-    @board = Board.find(params[:id])
+    if current_user # && current_user.id == User.find(params[:id]).id
+      @board = Board.find(params[:id])
+    else
+      redirect_to root_path
+    end
   end
 
   def update
     @board = Board.find(params[:id])
     if @board.update_attributes(params.require(:board).permit(:name, :type, :description))
-      redirect_to boards_path
+      redirect_to user_path(current_user)
     else
       render 'edit'
     end

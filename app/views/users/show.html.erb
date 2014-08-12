@@ -1,7 +1,10 @@
 <h1> SHOW </h1>
 
 <% @board.each do |b| %>
-<li> <%= b.name %> <%= b.type %> <%= b.description %></li> 
+<li>
+  <%= b.name %> <%= b.type %> <%= b.description %>
+  <%= link_to 'Edit', edit_board_path(b.id) %>
+</li> 
 <% end %>
 
 

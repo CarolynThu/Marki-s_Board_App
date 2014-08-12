@@ -20,7 +20,7 @@ class SessionsController < ApplicationController
   def destroy
     # Kill all of our cookies
     reset_session
-    redirect_to new_user_path
+    redirect_to main_path
   end
 
 end
