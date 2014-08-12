@@ -33,6 +33,7 @@ class BoardsController < ApplicationController
   def edit
     if current_user # && current_user.id == User.find(params[:id]).id
       @board = Board.find(params[:id])
+  
     else
       redirect_to root_path
     end
