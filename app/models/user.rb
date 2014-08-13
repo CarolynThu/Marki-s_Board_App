@@ -10,7 +10,9 @@ class User
   validates :email, presence: true
   validates_uniqueness_of :email
 
-  has_many :boards
+  has_many :boards, dependent: :destroy
+  # dependent: :destroy destroys all boards associated
+  # with each user if a user is destroyed.
   has_secure_password
 
 

@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default" role="navigation">
+<nav class="navbar navbar-inverse" role="navigation">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -15,17 +15,15 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><%= link_to "Custom Board", new_board_path %></li>
+        <li><%= link_to "Gallery", new_board_path %></li>
         <li><a href="/about">About Marki</a></li>
       </ul>
     
       <ul class="nav navbar-nav navbar-right">
         <li>
-          <% if current_user %>
-          <% if current_user.is_admin %>
+          <% if current_user && current_user.is_admin %>
           <%= link_to 'Admin Only', boards_path %>
           <% else %>
-          <% end %>
           <% end %>
         </li>
         <li>

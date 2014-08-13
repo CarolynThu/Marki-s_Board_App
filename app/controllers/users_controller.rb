@@ -14,7 +14,8 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @board = current_user.boards
+    @boards = current_user.boards
+    @board = current_user.boards.new
   end
 
 
