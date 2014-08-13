@@ -1,0 +1,59 @@
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Marki's Boards</a>
+      <%#= link_to "Marki's Boards", main_path %>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><%= link_to "Custom Board", new_board_path %></li>
+        <li><a href="/about">About Marki</a></li>
+      </ul>
+    
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <% if current_user %>
+          <% if current_user.is_admin %>
+          <%= link_to 'Admin Only', boards_path %>
+          <% else %>
+          <% end %>
+          <% end %>
+        </li>
+        <li>
+          <% if current_user %>
+          <%= link_to 'Your Account', user_path(current_user.id) %>
+          <% else %>
+          <% end %>
+        </li>
+        <li>
+          <% if current_user %>
+          <%= link_to 'Edit Profile', edit_user_path(current_user.id) %>
+          <% else %>
+           <%= link_to 'Sign Up', new_user_path %>
+           <% end %>
+        </li>
+        <li>
+          <% if current_user %>
+          <%= link_to 'Logout', session_path, method: :delete %>
+          <% else %>
+          <%= link_to 'Login', new_session_path %>
+          <% end %>
+        </li>
+
+
+  
+       
+
+      </ul>
+    </div><!-- /.navbar-collapse --
+  </div><!-- /.container-fluid -->
+</nav>
