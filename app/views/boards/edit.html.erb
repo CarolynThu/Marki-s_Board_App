@@ -6,10 +6,9 @@
     <%= f.text_field :type, placeholder: 'Type' %>
     <%= f.text_field :description, placeholder: 'Description' %>
     <%= f.submit 'Save Changes' %>
-  <% end %>
+    <%= link_to 'Delete Board', @board, method: :delete %>
 
-<%#= link_to "Home", main_path %>
-<%#= link_to "SHOW", user_path(current_user) %>
+  <% end %>
 
 
 

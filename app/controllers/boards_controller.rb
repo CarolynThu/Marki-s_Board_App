@@ -52,8 +52,9 @@ class BoardsController < ApplicationController
   end
 
   def destroy
-    @board = Board.find(parms [:id])
-    @board.destory
+    @board = Board.find(params[:id])
+    @board.destroy
+    redirect_to user_path(current_user)
   end 
 
    def login
