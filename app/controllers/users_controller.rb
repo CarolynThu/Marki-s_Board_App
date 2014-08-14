@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-
+before_action :login
   def index
     if current_user 
 
@@ -50,5 +50,10 @@ class UsersController < ApplicationController
     reset_session
     User.find(params[:id]).destroy
     redirect_to main_path
+  end
+
+   def login
+    @user_login = User.new
+    @is_login = true
   end
 end

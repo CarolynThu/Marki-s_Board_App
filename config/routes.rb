@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   resources :users
-  resource :session, only: [:new, :create, :destroy]
+  resource :session, only: [:create, :destroy]
   resources :boards
 
   get 'about' => 'welcome#about', as: :about

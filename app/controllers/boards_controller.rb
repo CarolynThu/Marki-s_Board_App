@@ -1,4 +1,6 @@
 class BoardsController < ApplicationController
+
+  before_action :login
   def index
     if current_user && current_user.is_admin
       @boards = Board.all
@@ -52,6 +54,11 @@ class BoardsController < ApplicationController
     @board = Board.find(parms [:id])
     @board.destory
   end 
+
+   def login
+    @user_login = User.new
+    @is_login = true
+  end
 end
 
 
