@@ -1,5 +1,5 @@
 class WelcomeController < ApplicationController
-  before_action :login
+  before_action :login, :signup
   def index
   end
 
@@ -9,5 +9,9 @@ class WelcomeController < ApplicationController
   def login
     @user_login = User.new
     @is_login = true
+  end
+
+  def signup
+    @user_signup = User.new
   end
 end

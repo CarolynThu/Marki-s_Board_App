@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  resources :users
+  resources :users, except: [:new]
   resource :session, only: [:create, :destroy]
   resources :boards
 

@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
-before_action :login
+before_action :login, :signup
+
+
   def index
     if current_user 
 
@@ -8,9 +10,7 @@ before_action :login
     end
   end
 
-  def new
-    @user = User.new
-  end
+  
 
   def show
     @user = User.find(params[:id])
@@ -55,5 +55,9 @@ before_action :login
    def login
     @user_login = User.new
     @is_login = true
+  end
+
+  def signup
+    @user_signup = User.new
   end
 end
