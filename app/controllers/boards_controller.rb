@@ -9,6 +9,11 @@ class BoardsController < ApplicationController
     end
   end
 
+  def global
+    @photos = Photo.all
+  end
+
+
   def show
     @board = Board.find(params[:id])
   end

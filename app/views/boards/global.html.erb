@@ -1,0 +1,7 @@
+<h2>Global View</h2>
+<p>This is where we display all photos</p>
+
+<% @photos.each do |p| %>
+
+<%= image_tag p.image %>
+<% end %>
