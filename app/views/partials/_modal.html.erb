@@ -39,20 +39,16 @@
       <div class="modal-body">
         <div class= "form-group">
            <%= form_for @user_signup do |f| %>
-    <%= f.text_field :name, placeholder: 'Name',class: 'form-control' %>
-    <%= f.text_field :email, placeholder: 'Email',class: 'form-control' %>
-    <%= f.password_field :password, placeholder: 'Password',class: 'form-control' %>
+    <%= f.text_field :name, placeholder: 'Name',class: 'form-control' %><br>
+    <%= f.text_field :email, placeholder: 'Email',class: 'form-control' %><br>
+    <%= f.password_field :password, placeholder: 'Password',class: 'form-control' %><br>
     <%= f.password_field :password_confirmation, placeholder: 'Confirm Password',class: 'form-control' %>
-  
-        
-      
-  
         </div>
       </div>
       <div class="modal-footer">
           <%= f.submit 'Sign up', class: 'btn btn-primary' %>
         <% end %>
-        <%= link_to "Home", main_path %>
+        
       
       </div>
     </div>

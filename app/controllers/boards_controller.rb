@@ -1,5 +1,4 @@
 class BoardsController < ApplicationController
-
   before_action :login, :signup
 
   def index

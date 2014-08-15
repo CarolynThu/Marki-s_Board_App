@@ -16,9 +16,16 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li><%= link_to "Gallery", new_board_path %></li>
-        <li><a href="/about">About Marki</a></li>
-      </ul>
-    
+         <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">About Us <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="/main">About the Company</a></li>
+            <li><a href="/about">About Marc Takaki</a></li>      
+          </ul>
+        </li>
+       </ul>
+
+
       <ul class="nav navbar-nav navbar-right">
         <% if current_user %>
         <p class="navbar-text">Hello, <%= current_user.name %></p>

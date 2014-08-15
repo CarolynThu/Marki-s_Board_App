@@ -1,2 +1,21 @@
 @import 'bootstrap';
 
+@import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/css/bootstrap-glyphicons.css");
+
+.carousel-inner > .item > img{
+  width:100%;
+}
+
+/*.carousel-wrapper {
+  width:980px;
+}
+
+}*/
+
+.carousel-inner {
+  max-height: 550px;
+}
+
+.carousel img {
+
+}
