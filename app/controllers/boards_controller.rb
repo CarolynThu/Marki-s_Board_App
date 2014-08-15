@@ -7,6 +7,7 @@ class BoardsController < ApplicationController
     else
       redirect_to new_session_path
     end
+    @photo = Photo.new
   end
 
   def global

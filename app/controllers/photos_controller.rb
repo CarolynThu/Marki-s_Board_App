@@ -8,7 +8,7 @@ class PhotosController < ApplicationController
     if current_user && current_user.is_admin
       @photo = Photo.new
     else
-      redirect_to new_board_path
+      redirect_to global_path
     end
   end
 
@@ -21,7 +21,7 @@ class PhotosController < ApplicationController
     @photo = Photo.new(photo_params)
   end
   if @photo.save
-    redirect_to new_board_path
+    redirect_to global_path
   else
     render 'new'
   end

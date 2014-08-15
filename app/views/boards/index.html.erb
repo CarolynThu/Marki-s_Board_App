@@ -7,5 +7,12 @@
 <% end %>
 
 
-<h3> Adding photos to gallery </h3>
+<h1>something</h1>
+
+<% if current_user && current_user.is_admin %>
+  <%= form_for @photo, {url: photos_path(@photo)} do |f| %> 
+  <%= f.file_field :image %> <%= f.submit "Upload" %>
+  <% end %>
+  <%= link_to 'Admin Only', boards_path %>
+<% end %>
 
