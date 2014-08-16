@@ -1,18 +1,32 @@
-<h3> Admin ONLY </h3>
+
+
+<h3> Board Requests </h3>
 
 <% @boards.each do |b| %>
 <li>
   <%= b.name %> <%= b.type %> <%= b.description %>
 </li> 
+
+    <label>
+      <input type="checkbox"> Contacted
+    </label>
+  
+ 
+    <label>
+      <input type="checkbox"> Finished
+    </label>
+ 
 <% end %>
 
 
-<h1>something</h1>
+<h3>Uploading Images</h3>
 
 <% if current_user && current_user.is_admin %>
   <%= form_for @photo, {url: photos_path(@photo)} do |f| %> 
-  <%= f.file_field :image %> <%= f.submit "Upload" %>
+
+  <%= f.file_field :image %> <br> <%= f.submit "Upload" %>
   <% end %>
-  <%= link_to 'Admin Only', boards_path %>
+
 <% end %>
+
 

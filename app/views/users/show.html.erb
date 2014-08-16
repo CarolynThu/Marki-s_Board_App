@@ -1,14 +1,29 @@
-
 <h3> Make a custom board </h3>
+
+<div class="inner-container">
+<p> Step 1: The Basics</p>
 <%= form_for @board do |f| %>
 Name: <%= f.text_field :name, placeholder: "Name" %>
 <%= f.text_field :type, placeholder: "Type" %>
+
+<p> Step 2: Choose your board</p>
+<%= image_tag("Hand_boards.jpg", :alt => "") %>
+
+<p> Step 3: Design your board </p>
 <%= f.text_field :description, placeholder: "Description" %>
 
+
+
+
+<p> Step 4: Double check and lets make a board!</p>
 <%= f.submit "submit!" %>
 
 <% end %>
+</div>
 
+<br>
+<br>
+<br>
 
 <h3> Board Orders </h3>
 <% @boards.each do |b| %>
