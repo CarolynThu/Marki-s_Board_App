@@ -2,17 +2,50 @@
 
 @import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/css/bootstrap-glyphicons.css");
 
+
+.carousel-wrapper {
+  border-bottom: solid black 20px;
+}
+
 .carousel-inner > .item > img{
   width:100%;
 }
-
 .carousel-inner {
   max-height: 550px;
 }
+.carousel-fade {
+  .carousel-inner {
+    .item {
+      opacity: 0;
+      transition-property: opacity;
+      transition-duration: 2s;
+    }
 
-.carousel img {
+    .active {
+      opacity: 2;
+    }
 
+    .active.left,
+    .active.right {
+      left: 0;
+      opacity: 0;
+      z-index: 1;
+    }
+
+    .next.left,
+    .prev.right {
+      opacity: 1;
+    }
+  }
+
+  .carousel-control {
+    z-index: 2;
+  }
 }
+
+
+
+
 
 body {
   background-image: url("square_bg.png");
@@ -27,8 +60,23 @@ img.navbar-brand {
 }
 
 #text-left {
-  width: 50%;
+  width: 61%;
   text-align: left;
+  font-family: 'Homemade Apple', cursive;
+  margin-top: -1%;
+  
+}
+.first {
+  text-indent: 50px;
+}
+.second {
+  text-indent: 50px;
+}
+.third {
+  text-indent: 50px;
+}
+.fourth {
+  text-indent: 50px;
 }
 
 #marcphoto {
@@ -37,6 +85,7 @@ img.navbar-brand {
   background-repeat: no-repeat;
   width: 400px;
   height: 542px;
+
 }
 
 .inside{
@@ -47,6 +96,26 @@ img.navbar-brand {
 .contains {
   margin: 0 auto;
   width: 86%;
-  margin-top: 4%;
+  margin-top: 0%;
   margin-bottom: 4%;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
