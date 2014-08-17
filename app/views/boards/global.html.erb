@@ -1,7 +1,12 @@
-<h2>Global View</h2>
-<p>This is where we display all photos</p>
+<h2>Gallery</h2>
 
 <% @photos.each do |p| %>
 
 <%= image_tag p.image, size: "100x100" %>
+
+
+<% if current_user && current_user.is_admin %>
+  <%= link_to 'Delete', p,method: :delete, data: {confirm:'Are you sure?'} %>
+<% end %>
+
 <% end %>

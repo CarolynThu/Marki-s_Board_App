@@ -13,3 +13,40 @@
 .carousel img {
 
 }
+
+body {
+  background-image: url("square_bg.png");
+ 
+}
+
+img.navbar-brand {
+  height: 53px;
+  width: 112px;
+  margin-top: -9px;
+  padding-top: 0px;
+}
+
+#text-left {
+  width: 50%;
+  text-align: left;
+}
+
+#marcphoto {
+  background-image: url("_MG_6889.JPG");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 400px;
+  height: 542px;
+}
+
+.inside{
+  display: inline-block;
+  vertical-align: top;
+}
+
+.contains {
+  margin: 0 auto;
+  width: 86%;
+  margin-top: 4%;
+  margin-bottom: 4%;
+}

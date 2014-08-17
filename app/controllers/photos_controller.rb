@@ -36,6 +36,13 @@ def login
     @user_signup = User.new
   end
 
+  def destroy
+    @photo = Photo.find(params[:id])
+    @photo.destroy 
+    redirect_to global_path
+  end
+
+
 private
 
   def photo_params
