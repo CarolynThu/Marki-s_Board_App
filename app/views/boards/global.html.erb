@@ -1,19 +1,25 @@
 
 <div class="galleryContainer">
-<div class="text-center">
-  <h2>Gallery</h2>
+  <div class="text-center">
+    <h2>Gallery</h2>
+  </div>
+
+  <div class = "galleryContent">
+    <% @photos.each do |p| %>
+      <%= image_tag p.image, size: "250x200" %>
+    <% end %>
+  </div>
+
+
+  <% if current_user && current_user.is_admin %>
+    <%= link_to 'Delete', p,method: :delete, data: {confirm:'Are you sure?'} %>
+  <% end %>
+
+
+
 </div>
 
-<div class = "galleryContent">
-  <% @photos.each do |p| %>
-  <%= image_tag p.image, size: "250x200" %>
-</div>
-
-
-<% if current_user && current_user.is_admin %>
-  <%= link_to 'Delete', p,method: :delete, data: {confirm:'Are you sure?'} %>
-<% end %>
-
-<% end %>
-
-</div>
+<br>
+<br>
+<br>
+<br>
