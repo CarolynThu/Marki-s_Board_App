@@ -5,9 +5,11 @@
   width: 100px;
   height: 100px;
 }
-/*.inner-container {
-  
-  border-radius: 5px;
-  position: relative;
-  padding: 20px 0;
-}*/
+td, th, tr {
+  border: 2px solid #999;
+  padding: 0.5rem;
+  text-align: center;
+}
+input{
+   text-align:center;
+}

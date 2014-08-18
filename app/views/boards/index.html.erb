@@ -1,24 +1,34 @@
-
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
 <h3> Board Requests </h3>
 
-<% @boards.each do |b| %>
-<li>
-  <%= b.name %> <%= b.type %> <%= b.description %>
-</li> 
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Contacted</th>
+      <th>Finished</th>
+      <!-- <th>Delete</th> -->
+    </tr>
+  </thead>
+  <tbody>
+    <% @boards.each do |b| %>
+    <tr class="table-odd">
+      <td><%= b.name %></td>
+      <td><%= b.type %></td>
+      <td><%= b.description %></td>
+      <td><input type="checkbox"><br><input type="text" placeholder="Date"></td>
+      <td><input type="checkbox"><br><input type="text" placeholder="Date"></td>
+      <!-- <td><%#= link_to 'Delete Board', @admin_board, method: :delete %></td> -->
+    <% end %>
+    </tr>
+  </tbody>
+</table>
+<br>
 
-    <label>
-      <input type="checkbox"> Contacted
-    </label>
-  
- 
-    <label>
-      <input type="checkbox"> Finished
-    </label>
- 
-<% end %>
-
-
+<div class="upload">
 <h3>Uploading Images</h3>
 
 <% if current_user && current_user.is_admin %>
@@ -28,5 +38,5 @@
   <% end %>
 
 <% end %>
-
-
+<p> Images will automically be shown in gallery</p>
+</div>

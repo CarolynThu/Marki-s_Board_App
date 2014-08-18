@@ -57,12 +57,24 @@ class BoardsController < ApplicationController
   end
 
   def destroy
+    if current_user
     @board = Board.find(params[:id])
     @board.destroy
     redirect_to user_path(current_user)
+    else
+      @board = Board.find(params[:id])
+      @board.destroy
+      redirect_to boards_path
+    end
   end 
 
-   def login
+# function added to for admin to delete boards.
+  # def admin_delete
+  #   @admin_board = Board.find(params[:id])
+  #   @admin_board.destroy
+  # end
+
+  def login
     @user_login = User.new
     @is_login = true
   end

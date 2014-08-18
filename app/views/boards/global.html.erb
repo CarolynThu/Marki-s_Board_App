@@ -1,8 +1,11 @@
-<h2>Gallery</h2>
+<div class="text-center">
+  <h2>Gallery</h2>
+</div>
+
 
 <% @photos.each do |p| %>
 
-<%= image_tag p.image, size: "100x100" %>
+<%= image_tag p.image, size: "250x200" %>
 
 
 <% if current_user && current_user.is_admin %>
