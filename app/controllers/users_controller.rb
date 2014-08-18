@@ -25,7 +25,7 @@ before_action :login, :signup
       session[:user_id] = @user.id.to_s
       redirect_to user_path(@user)
     else
-      redirect_to new_user_path
+      redirect_to main_path
     end
   end
 

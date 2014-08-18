@@ -57,14 +57,14 @@ class BoardsController < ApplicationController
   end
 
   def destroy
-    if current_user
+    # if current_user
     @board = Board.find(params[:id])
     @board.destroy
     redirect_to user_path(current_user)
-    else
-      @board = Board.find(params[:id])
-      @board.destroy
-      redirect_to boards_path
+    # else
+      # @board = Board.find(params[:id])
+      # @board.destroy
+      # redirect_to boards_path
     end
   end 
 
@@ -82,6 +82,6 @@ class BoardsController < ApplicationController
   def signup
     @user_signup = User.new
   end
-end
+
 
 

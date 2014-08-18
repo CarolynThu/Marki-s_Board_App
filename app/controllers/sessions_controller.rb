@@ -14,7 +14,9 @@ class SessionsController < ApplicationController
         redirect_to user_path(current_user)
       end
     else
-      redirect_to new_user_path
+      flash[:error] = "Email or Password do not match! Please try again"
+      redirect_to main_path
+
     end
   end
 
