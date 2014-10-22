@@ -1,25 +1,151 @@
 
+<!-- 
 <div class="galleryContainer">
-  <div class="text-center">
-    <h2>Gallery</h2>
-  </div>
-
-  <div class = "galleryContent">
-    <% @photos.each do |p| %>
-      <%= image_tag p.image, size: "250x200" %>
-    <% end %>
-  </div>
-
-
-  <% if current_user && current_user.is_admin %>
-    <%= link_to 'Delete', p,method: :delete, data: {confirm:'Are you sure?'} %>
-  <% end %>
-
-
-
+<div class="text-center">
+  <h2>Gallery</h2>
 </div>
 
-<br>
-<br>
-<br>
-<br>
+<div class = "galleryContent">
+  <%# @photos.each do |p| %>
+  <%#= image_tag p.image, size: "250x200" %>
+</div>
+
+
+<%# if current_user && current_user.is_admin %>
+  <%#= link_to 'Delete', p,method: :delete, data: {confirm:'Are you sure?'} %>
+<%# end %>
+
+<%# end %>
+
+</div> -->
+
+
+
+<body>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-lg-12">
+                <h1 class="page-header">Gallery</h1>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <%= image_tag("1.JPG", :alt => "") %>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <%= image_tag("2.JPG", :alt => "") %>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <%= image_tag("3.JPG", :alt => "") %>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <%= image_tag("4.JPG", :alt => "") %>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <%= image_tag("5.JPG", :alt => "") %>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <%= image_tag("6.JPG", :alt => "") %>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <%= image_tag("7.JPG", :alt => "") %>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <%= image_tag("8.JPG", :alt => "") %>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <%= image_tag("9.JPG", :alt => "") %>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <%= image_tag("10.JPG", :alt => "") %>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <%= image_tag("11.JPG", :alt => "") %>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <%= image_tag("12.JPG", :alt => "") %>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <%= image_tag("13.JPG", :alt => "") %>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <%= image_tag("14.JPG", :alt => "") %>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <%= image_tag("15.JPG", :alt => "") %>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <%= image_tag("16.JPG", :alt => "") %>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <%= image_tag("17.JPG", :alt => "") %>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <%= image_tag("18.JPG", :alt => "") %>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <%= image_tag("19.JPG", :alt => "") %>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <%= image_tag("20.JPG", :alt => "") %>
+                </a>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- Footer -->
+    
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery Version 1.11.0 -->
+    <script src="js/jquery-1.11.0.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
